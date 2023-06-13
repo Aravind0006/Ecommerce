@@ -1,0 +1,20 @@
+<table style="width: 1100px;">
+     <tr>
+          <th>PRODUCTID</th>
+          <th style="width: 150px;">QTY</th>
+          <th style="width: 150px;">PRICE</th>
+          <th>AMOUNT</th>
+          <th>USERID</th>
+          <th>OREDERID</th>
+          <th>TOTAL AMOUNT</th>
+     </tr>
+<tr *ngFor="let x of orderData" >
+     <td>{{x.productId}}</td>
+     <td>{{x.qty}}</td>
+     <td>{{ x.unitPrice | currency:'INR' }}</td>
+     <td>{{x.amount | currency:'INR'}}</td>
+     <td>{{x.userId}}</td>
+     <td>{{x.orderId}}</td>
+     <td>{{x.totalAmt | currency:'INR'}}</td>
+</tr>
+</table>

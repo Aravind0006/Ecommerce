@@ -1,0 +1,59 @@
+<div class="card" style="width: 1100px;">
+  <div class="card-body">
+    <button type="button" class="btn btn-outline-success" routerLink="/products">Add new products</button>
+
+
+
+<table class="table table-striped">
+  <tr>
+    <th>productId</th>
+    <th>ProductImg</th>
+    <th>ProductName</th>
+    <th>Productdescription</th>
+    <th>sellingPrice</th>
+    <th>categoryId</th>
+    <th>mrp</th>
+    <th>discount</th>
+
+
+  </tr>
+  <tr *ngFor="let x of EmpDatas">
+    <td>{{x.productId}}</td>
+    <td><img [src]="baseUrl + x.imgUrl" class="img1"></td>
+    <td>{{x.productName }}</td>
+    <td>{{x.description}}</td>
+    <td>₹{{x.sellingPrice}}</td>
+    <td>{{x.categoryId}}</td>
+    <td>{{x.mrp |currency:'INR':true}}</td>
+    <td>₹{{x.discount}}</td>
+
+  </tr>
+
+
+</table>  </div>
+</div>
+
+<!-- 
+<div class="card" style="width: 800px;">
+  <div class="card-body" *ngFor="let x of EmpDatas">
+    <div class="row">
+      <div class="col-5"> {{x.image}} </div>
+    </div>
+    <div class="row">
+      <div class="col-6">
+        <h5>{{x.productname}}</h5>
+      </div>
+    </div>
+    <div class="row">
+      <div class="cl-6"> {{x.productdesc}}</div>
+    </div>
+    <div class="row">
+      <div class="col-5">
+        <h4>{{x.productprice |currency:'INR':true}}</h4>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-6">{{x.category}}</div>
+    </div>
+  </div>
+</div> -->

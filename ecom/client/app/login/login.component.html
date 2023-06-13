@@ -1,0 +1,155 @@
+<!-- <div class="sign-in">
+  <div class="sign-in-htm">
+    <div class="container">
+      <form name="form" [formGroup]="logform" style="width: fit-content;">
+        <div class="login-form">
+
+        <div class="group">
+          <div class="form-group col-md-5" style="margin-top: 50px;">
+            <label class="label" style="text-align:center;font-size: larger;color: white;background: transparent ;">EmailId
+              </label> <br>
+            <input type="text" formControlName="Email" placeholder="Username Or Email"
+              style="width: 400px;height: 50px;" class="input"
+              [ngClass]="{ 'is-invalid': submitted && logform.controls['Email'].invalid }" required >
+            <div *ngIf="submitted && logform.controls['Email'].invalid" class="invalid-feedback">
+              <div *ngIf="logform.controls['Email'].errors required">Email is required</div>
+              <div *ngIf="logform.controls['Email'].errors email">Email is required</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="group">
+        <div class="form-group col-md-5" style="margin-top: 30px;">
+          <label style="font-size: larger;color: aliceblue;" class="label">Password</label>
+          <br>
+          <input type="text" formControlName="password" style="width: 400px;height: 50px;" placeholder="Password"
+            class="input" [ngClass]="{ 'is-invalid': submitted && logform.controls['password'].invalid }"
+            required>
+          <div *ngIf="submitted && logform.controls['password'].invalid" class="invalid-feedback">
+            <div *ngIf="logform.controls['password'].errors required">Password is required</div>
+          </div>
+        </div>
+        </div>
+
+
+        <br>
+        <div class="group">
+          <input id="check" type="checkbox" class="check" checked>
+          <label for="check" style="color: black;" ><span class="icon"></span> Keep me Signed
+            in</label>
+        </div><br>
+        <div class="group">
+          <button (click)="login()" class="button">Login now</button>
+        </div>
+        <hr>
+        </div>
+      </form>
+    </div>
+  </div>
+  <div class="foot-lnk">
+    <a href="#signin" style="color: aliceblue;">Forgot Password?</a>
+  </div>
+</div>
+ -->
+
+
+ <!-- <div class="login-wrap">
+	<div class="login-html">
+		<input id="tab-1" type="radio" name="tab" class="sign-in" checked><label for="tab-1" class="tab">SIGN
+			In	</label>
+		<input id="tab-2" type="radio" name="tab" class="sign-up"><label for="tab-2" class="tab"
+			style="font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;margin-left: 150px;">SIGN
+			UP</label>
+		<div class="login-form">
+
+			<div class="sign-in-htm">
+				<div class="group">
+					<label for="user" class="label" style="text-align:center;font-size: larger;color: white;background: transparent ;">Email</label>
+					<input id="user" type="text" formControlName="Email" placeholder="Username Or Email"
+          style="width: 400px;height: 50px;" class="input"  [ngClass]="{ 'is-invalid': submitted && logform.controls['Email'].invalid }" required >
+          <div *ngIf="submitted && logform.controls['Email'].invalid" class="invalid-feedback">
+            <div *ngIf="logform.controls['Email'].errors required">Email is required</div>
+            <div *ngIf="logform.controls['Email'].errors email">Email is required</div>
+          </div>
+				</div>
+				<div class="group">
+					<label for="pass"  class="label"  style="text-align:center;font-size: larger;color: white;background: transparent ;">Password</label>
+					<input id="pass" type="password" class="input" data-type="password"  formControlName="password" style="width: 400px;height: 50px;" placeholder="Password"
+          class="input" [ngClass]="{ 'is-invalid': submitted && logform.controls['password'].invalid }"
+          required>  <div *ngIf="submitted && logform.controls['password'].invalid" class="invalid-feedback">
+            <div *ngIf="logform.controls['password'].errors required">Password is required</div>
+          </div>
+				</div>
+				<div class="group">
+					<input id="check" type="checkbox" class="check" checked>
+					<label for="check"><span class="icon"></span> Keep me Signed in</label>
+				</div>
+				<div class="group">
+					<input type="submit"  (click)="login()" class="button" value="Sign In">
+				</div>
+				<div class="hr"></div>
+				<div class="foot-lnk">
+					<a href="#forgot">Forgot Password?</a>
+				</div>
+			</div> 
+
+
+			<div class="sign-up-htm">
+			
+						
+		</div>
+	</div>
+</div> -->
+
+<div class="card"  >
+  <div class="card-body">
+    <div class="container">
+      <div class="screen">
+        <div class="screen__content">
+          <form class="login" [formGroup]="logform">
+            <h1>Sign in</h1>
+            <div class="login__field">
+              <i class="login__icon fas fa fa-user"></i>
+              <input type="text"  formControlName="Email" class="form-group" placeholder="User name / Email"
+              [ngClass]="{ 'is-invalid': submitted && logform.controls['Email'].invalid }" required>
+              <div *ngIf="submitted && logform.controls['Email'].invalid" class="invalid-feedback">
+                <div *ngIf="logform.controls['Email'].errors required">Email is required</div>
+                <div *ngIf="logform.controls['Email'].errors email">Email is required</div>
+              </div>
+            </div>
+            <div class="login__field">
+              <i class="login__icon fas fa fa-lock"></i>
+              <input type="password"  formControlName="password" class="form-group" placeholder="Password"
+              [ngClass]="{ 'is-invalid': submitted && logform.controls['password'].invalid }"
+            required>  <div *ngIf="submitted && logform.controls['password'].invalid" class="invalid-feedback">
+              <div *ngIf="logform.controls['password'].errors required">Password is required</div>
+            </div>
+            </div>
+            <button (click)="login()" class="button login__submit">
+              <span class="button__text"  >Log In Now</span>
+              <i class="button__icon fas fa fa-arrow-right"></i>
+            </button>				
+            <br>
+            <button class="button login__submit" style="background: transparent;width: fit-content;color: white;"><b>Forgot <br> password</b></button>
+            
+          </form>
+          <div class="social-login" routerLink="/demo">
+       
+            <button class="button login__submit">
+              <span class="button__text">New User</span>
+              <i class="button__icon fas fa fa-arrow-right"></i>
+            </button>			
+          </div>
+        </div>
+        <div class="screen__background">
+          <span class="screen__background__shape screen__background__shape4"></span>
+          <span class="screen__background__shape screen__background__shape3"></span>		
+          <span class="screen__background__shape screen__background__shape2"></span>
+          <span class="screen__background__shape screen__background__shape1"></span>
+        </div>		
+      </div>
+    </div>
+
+
+  </div>
+</div>

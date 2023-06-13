@@ -1,0 +1,257 @@
+<!-- <div class="card">
+  <div class="card-body">
+    <br>
+
+    <div class="header" style="text-align: center;">
+      <h2><strong>BRAND NEW MOBILE PHONES</strong></h2>
+    </div>
+    <br>
+    <div class="row " style="margin-left: 15px;">
+      <div class="card col-md-3" style="width: 320px;" *ngFor="let x of mobilelist">
+        <img [src]="x.Imgurl" height="300px" width="100%" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5>{{x.productName}}</h5>
+          <p class="card-text">{{x.productDesc}}</p>
+          <h3>{{x.price | currency:'INR':true}}</h3>
+          <button type="button" class="btn btn-outline-warning" style="margin: auto;">ADD TO CART</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div> -->
+
+<!-- ====================================================secound row mobile cards ========================================================== -->
+<!-- <div class="card col-md-3" style="width: 320px; margin-top: 20px;" *ngFor="let x of prolist">
+  <img [src]="x.Imgurl" height="300px" width="100%" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5>{{x.productName}}</h5>
+    <p class="card-text">{{x.productDesc}}</p>
+    <h3>{{x.price | currency:'INR':true}}</h3>
+    <button type="button" class="btn btn-outline-warning">ADD TO CART</button>
+  </div>
+</div>
+<br> 
+</div> -->
+<!-- ---------------------------------------------------third row cards ------------------------------------------------------- -->
+
+<!-- <div class="card" style="margin-top: 50px;">
+  <div class="card-body">
+    <br>
+
+    <div class="header" style="text-align: center;">
+      <h2><strong>DAILY GROSERY PRODUCTS AT YOUR DOOR STEP</strong></h2>
+    </div>
+    <br>
+
+    <div class="row " style="margin-left: 15px;">
+      <div class="card col-md-3" style="width: 320px;" *ngFor="let x of groseryList">
+        <img [src]="x.Imgurl" height="300px" width="100%" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5>{{x.productName}}</h5>
+          <p class="card-text">{{x.productDesc}}</p>
+          <h3>{{x.price | currency:'INR':true}}</h3>
+          <button type="button" class="btn btn-outline-warning" style="margin: auto;">ADD TO CART</button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+<br> -->
+
+<!-- --------------------------------------------------------------fourth row ----------------------------------------------- -->
+
+<!-- <div class="card" style="margin-top: 50px;">
+  <div class="card-body">
+
+    <div class="header" style="text-align: center;">
+      <h2><strong>BRAND NEW LAPTOPS</strong></h2>
+    </div>
+
+    <br>
+  
+    <div class="row " style="margin-left: 15px;">
+      <div class="card col-md-3" style="width: 320px;" *ngFor="let x of laptopList">
+        <img [src]="x.Imgurl" height="300px" width="100%" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5>{{x.productName}}</h5>
+          <p class="card-text">{{x.productDesc}}</p>
+          <h3>{{x.price | currency:'INR':true}}</h3>
+          <button type="button" class="btn btn-outline-warning" style="margin: auto;">ADD TO CART</button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+<br> -->
+
+
+<!--===================================================fifth =======================================  -->
+<!-- <div class="card" style="margin-top: 50px;">
+  <div class="card-body">
+    <br>
+
+    <div class="header" style="text-align: center;">
+      <h2><strong>BRAND NEW LATEST PS5 GAMES AND MUCH MORE</strong></h2>
+    </div>
+<br>
+
+<div class="row " style="margin-left: 15px;">
+  <div class="card col-md-3" style="width: 320px;" *ngFor="let x of gamesList">
+    <img [src]="x.Imgurl" height="300px" width="100%" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5>{{x.productName}}</h5>
+      <p class="card-text">{{x.productDesc}}</p>
+      <h3>{{x.price | currency:'INR':true}}</h3>
+      <button type="button" class="btn btn-outline-warning" style="margin: auto;">ADD TO CART</button>
+    </div>
+  </div>
+</div>
+    </div>
+  </div>
+
+<br> -->
+
+
+<!-- <div class="card">
+  <div class="card-body">
+    <form [formGroup]="productdetail" name="form">
+      <div class="row">
+
+        <div class="col">
+          <label for="productid">ProductId</label>
+          <input type="text" class="form-control" formControlName="productid" placeholder="productid"
+            aria-label="productid">
+        </div>
+
+        <div class="col">
+          <label for="name">Name</label>
+          <input type="text" class="form-control" formControlName="name" placeholder="name" aria-label="name">
+        </div>
+        <div class="col">
+          <label for="mobile">Mobile</label>
+          <input type="text" class="form-control" formControlName="mobile" placeholder="mobile" aria-label="mobile">
+        </div>
+        <div class="col">
+          <label for="username">Username</label>
+          <input type="text" class="form-control" placeholder="username" formControlName="username"
+            aria-label="username">
+        </div>
+      </div>
+
+      <div class="row" style="margin-top: 15px;">
+
+        <div class="col">
+          <label for="password">Password</label>
+          <input type="password" formControlName="password" class="form-control" placeholder="password"
+            aria-label="password">
+        </div>
+
+        <div class="col">
+          <label for="cpassword">Confirm password</label>
+          <input type="text" class="form-control" formControlName="cpassword" placeholder="Confirm password"
+            aria-label="cpassword">
+        </div>
+      </div>
+      <button type="button" class="btn btn-outline-success" style="margin-top: 15px;" >Submit</button>
+
+    </form>
+  </div> -->
+
+
+<div style="text-align:end;margin: 30px;width: 1000px;"> <button type="button" class="btn btn-success"
+    routerLink="/productdetail">ProductCheck</button></div>
+<div class="card">
+  <div class="card-body">
+    <form [formGroup]="productList" name="form">
+      <!-- ======================================   Image upload  =========================================================== -->
+      <div class="text-center">
+
+
+        <!-- <input class="form-control" formControlName="img" type="text"> -->
+        <input  type="file" #Upload multiple="true" (change)="selectFilePhoto($event)"><br>
+                        <i class="fa fa-upload" *ngIf="!imgUrl" (click)="Upload.click()"></i>
+
+
+        <!-- <button  class="btn btn-success"> 
+        Upload
+      </button> -->
+      </div>
+
+      <!-- Shareable short link of uploaded file -->
+      <!-- <div class="container text-center jumbotron"  *ngIf="shortLink">
+      <h2> Visit Here</h2>
+      <a href="{{shortLink}}">{{shortLink}}</a>
+    </div> -->
+
+      <!--Flag variable is used here-->
+      <!-- <div class="container" *ngIf="loading">
+      <h3>Loading ...</h3>
+    </div> -->
+    <!-- <div class="col-3 "> <input type="text" placeholder="PRODUCT price" formControlName="img"></div> -->
+
+      <!-- ======================================  Product name ====================================================== -->
+
+      <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">Product name</label>
+        <input class="form-control" id="exampleFormControlInput1" placeholder=" Product name" formControlName="ProName">
+      </div>
+
+      <!-- =====================================  product description ===================================--============ -->
+      <div class="mb-3">
+        <label for="exampleFormControlTextarea1" class="form-label">product description</label>
+        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" formControlName="prodDesc"></textarea>
+      </div>
+
+
+
+
+      <!-- =====================================product price ===================================--============ -->
+
+      <div class="row">
+        <div class="col-3 "> <input type="number" placeholder="PRODUCT price" formControlName="proPrice"></div>
+        <div class="col-3 "> <input type="number" placeholder="SELLING PRICE" formControlName="sellprice"></div>
+        <div class="col-3 "> <input type="number" placeholder="DISCOUNTS" formControlName="prodiscount"></div>
+        <div class="col-3">
+          <!--   <div class="dropdown">
+       <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+        CATEGORY
+      </button>
+      <ul class="dropdown-menu">
+        <li><a class="dropdown-item" href="#">Mobiles</a></li>
+        <li><a class="dropdown-item" href="#">grosery</a></li>
+        <li><a class="dropdown-item" href="#">Laptops</a></li>
+        <li><a class="dropdown-item" href="#">Games</a></li>
+      </ul> -->
+
+
+          <select class="form-select cat" formControlName="proCategory" id="validationCustom04"
+          [ngClass]="{' is-invalid': submitted && productList.controls['title'].invalid}" required="">
+        <option selected value="">CATEGORY</option>
+        <option>Mobiles 1</option>
+        <option>grosery 2</option>
+        <option>Laptops 3</option>
+        <option>Games 4</option>
+     
+      <div *ngIf="submitted && productList.controls['title'].invalid" class="invalid-feedback">
+        <div *ngIf="productList.controls['title'].errors required" style="font-size: smaller;">Title Required</div>
+      </div>  </select>
+        </div>
+      </div>
+
+      <br>
+
+
+
+
+      <!-- ===================================product category ====================================================== -->
+
+
+      <div style="text-align: center;"> <button type="button" class="btn btn-success" (click)="submit()">SUBMIT</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+

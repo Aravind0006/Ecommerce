@@ -1,0 +1,167 @@
+<!-- <div class="login-wrap">
+	<div class="login-html" style="text-align: center;">
+		<input id="tab-1" type="radio" name="tab" class="sign-in" checked><label for="tab-1" class="tab">SIGN
+			In	</label>
+		<input id="tab-2" type="radio" name="tab" class="sign-up"><label for="tab-2" class="tab"
+			style="font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;margin-left: 150px;">SIGN
+			UP</label>
+		<div class="login-form"> -->
+
+<!-- =================================================================LOGIN FORM =============================================================================== -->
+
+ 		<!-- <div class="sign-in-htm"> -->
+		
+<!--		<form class="row needs-validation" name="form" [formGroup]="f">
+					<div class="group">
+
+						<br>
+						<label for="user" class="label"
+							style="text-align: center;font-size: larger;">Email</label><br>
+						<input type="text" formControlName="firstName" class="form-control"
+							[ngClass]="{ 'is-invalid': submit && f.controls['firstName'].invalid }" required>
+						<div *ngIf="submitted && f.controls['firstName'].invalid" class="invalid-feedback">
+							<div *ngIf="f.controls['firstName'].errors required">First Name is required</div>
+						</div>
+
+					</div>
+			<div class="group">
+				<label for="pass" class="label" style="text-align: center;font-size: larger;">Password</label><br>
+				<input type="text" formControlName="firstName" class="form-control"
+				[ngClass]="{ 'is-invalid': submitted && f.controls['firstName'].invalid }" required>
+			   <div *ngIf="submitted && f.controls['firstName'].invalid" class="invalid-feedback">
+				<div *ngIf="f.controls['firstName'].errors required">First Name is required</div>
+			   </div>
+
+
+				</div>
+			<br>
+			<div class="group">
+				<input id="check" type="checkbox" class="check" checked>
+				<label for="check"><span class="icon"></span> Keep me Signed in</label>
+			</div><br>
+			<div class="group">
+				<button type="submit" class="button" (click)="submit()">LOgin now</button>
+			</div>
+			<hr>
+			</form>
+
+			<div class="foot-lnk">
+				<a href="#forgot" style="color: aliceblue;">Forgot Password?</a>
+			</div>-->
+			
+	<!-- <app-login ></app-login>
+		 </div> -->
+
+<!-- ===============================================SIGNIN =============================================================================================== -->
+
+		<!-- <div class="sign-up-htm">
+			<form [formGroup]="loginform" name="form">
+				<div class="group">
+					<label for="user" class="label"
+						style="text-align: center;font-size: larger;">Username</label><br>
+					<input id="user" type="text" formControlName="username" class="input">
+				</div>
+				<div class="group">
+					<label for="pass" class="label"
+						style="text-align: center;font-size: larger;">Password</label><br>
+					<input id="pass" type="password" class="input" formControlName="password" data-type="password">
+				</div>
+				<div class="group">
+					<label for="pass" class="label" style="text-align: center;font-size: larger;">Mobile
+						Number</label><br>
+					<input id="pass" type="number" class="input" formControlName="mobile">
+				</div>
+				<div class="group">
+					<label for="pass" class="label" style="text-align: center;font-size: larger;">Email
+						Address</label><br>
+					<input id="pass" type="text" class="input" formControlName="email">
+				</div>
+				<div class="group">
+					<label for="Gender" class="label"
+						style="text-align: center;font-size: larger;">Gender</label><br>
+					<select class="form-select input" id="Gender" formControlName="gender">
+						<option selected value="">....</option>
+
+						<option class="g1">Male</option>
+						<option class="g1">Female</option>
+						<option class="g1">Others</option>
+					</select>
+				</div>
+				<br>
+				<div class="group">
+					<button type="submit" class="button" value="Sign Up" (click)="Logsubmit()">SIgnup</button>
+					<hr>
+				</div>
+				<div class="foot-lnk">
+					<label for="tab-1" style="color: aliceblue;">Already Member?</label>
+				</div>
+
+			</form>
+		</div>
+
+	</div>
+</div>
+</div> -->
+<!-- <div *ngFor="let x of getSignUp">
+	{{x.name}}
+</div> -->
+
+
+
+<div class="card"   >
+	<div class="card-body" style="text-align: center;">
+		
+	  <div class="container">
+	    <div class="screen">
+		 <div class="screen__content">
+		   <form class="login" [formGroup]="loginform">
+			<h1 style="font-family: Stencil Std, fantasy;">SIGN UP</h1>
+			<div class="login__field">
+			  <i class="login__icon fas fa fa-user"></i>
+			  <input type="text" class="form-group"  formControlName="username" placeholder="USERNAME">
+			</div>
+			<div class="login__field">
+				<i class="login__icon fas fa fa-envelope-o "></i>
+				<input type="email" class="form-group" formControlName="email"  placeholder="EMAILID">
+			   </div>
+			   <div class="login__field">
+				<i class="login__icon fas fa fa-mobile"></i>
+				<input type="number" class="form-group" formControlName="mobile" placeholder="MOBILE">
+			   </div>
+			<div class="login__field">
+			  <i class="login__icon fas fa fa-unlock-alt"></i>
+			  <input type="password" class="form-group" formControlName="password" placeholder="Password">
+			</div>
+			<div class="login__field">
+				<i class="login__icon fas fa fa-transgender"></i>
+				<select type="text" class="form-group" formControlName="gender" placeholder="Gender">
+					<option selected disabled value="">....</option>
+						<option class="g1">Male</option>
+						<option class="g1">Female</option>
+						<option class="g1">Others</option>
+				</select>
+			   </div>
+			<button (click)="Logsubmit()" class="button login__submit">
+			  <span class="button__text">SIGN UP</span>
+			  <i class="button__icon fas fa fa-arrow-right"></i>
+			</button>		
+			<button class="button login__submit"routerLink="/login">
+				<span class="button__text" >Already Have account</span>
+				<i class="button__icon fas fa fa-arrow-right"></i>
+			   </button>				
+			
+		   </form>
+		 
+		 </div>
+		 <div class="screen__background">
+		   <span class="screen__background__shape screen__background__shape4"></span>
+		   <span class="screen__background__shape screen__background__shape3"></span>		
+		   <span class="screen__background__shape screen__background__shape2"></span>
+		   <span class="screen__background__shape screen__background__shape1"></span>
+		 </div>		
+	    </div>
+	  </div>
+   
+   
+	</div>
+   </div>

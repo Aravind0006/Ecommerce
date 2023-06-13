@@ -1,0 +1,29 @@
+<nav class="navbar bg-body-tertiary" style="height: 100px;">
+     <div class="container-fluid">
+       <a class="navbar-brand"><img src="/assets/log2.png" height="80px" width="90px"></a>
+       <form class="d-flex" role="search">
+         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" >
+         <button class="btn btn-outline-success" type="submit">Search</button>
+       </form>
+     </div>
+   </nav>
+   
+   <div style="margin:20px;" class="d-flex align-items-start" >
+     <div class="nav flex-column nav-pills me-3" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+     <button class="n1 nav-link active" id="v-pills-home-tab" data-bs-toggle="pill" data-bs-target="#v-pills-home" type="button" role="tab" aria-controls="v-pills-home" aria-selected="true">Home</button>
+     <button class="n1 nav-link" id="v-pills-profile-tab" data-bs-toggle="pill" data-bs-target="#v-pills-profile" type="button" role="tab" aria-controls="v-pills-profile" aria-selected="false">PRODUCTS UPLOAD</button>     
+     <button class="n1 nav-link" id="v-pills-check-tab" data-bs-toggle="pill" data-bs-target="#v-pills-check" type="button" role="tab" aria-controls="v-pills-check" aria-selected="false">PRODUCTS CHECK</button>
+     <button class="n1 nav-link" id="v-pills-disabled-tab" data-bs-toggle="pill" data-bs-target="#v-pills-disabled" type="button" role="tab" aria-controls="v-pills-disabled" aria-selected="false">ORDERS</button>
+     <button class="n1 nav-link" id="v-pills-messages-tab" data-bs-toggle="pill" data-bs-target="#v-pills-messages" type="button" role="tab" aria-controls="v-pills-messages" aria-selected="false">BANNER</button>
+     <button class="n1 nav-link" id="v-pills-settings-tab" data-bs-toggle="pill" data-bs-target="#v-pills-settings" type="button" role="tab" aria-controls="v-pills-settings" aria-selected="false">USERS</button>
+
+     </div>
+     <div class="tab-content" id="v-pills-tabContent">
+       <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab" tabindex="0">...</div>
+       <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab" tabindex="0"><app-products></app-products></div>
+       <div class="tab-pane fade" id="v-pills-check" role="tabpanel" aria-labelledby="v-pills-check-tab" tabindex="0"><app-productlist></app-productlist></div>
+       <div class="tab-pane fade" id="v-pills-disabled" role="tabpanel" aria-labelledby="v-pills-disabled-tab" tabindex="0"><app-orders></app-orders></div>
+       <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab" tabindex="0"><app-banner></app-banner></div>
+       <div class="tab-pane fade" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab" tabindex="0" ><app-users></app-users></div>
+     </div>
+   </div>

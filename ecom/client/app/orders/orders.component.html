@@ -1,0 +1,123 @@
+<!-- As a heading -->
+ <nav class="navbar bg-body-tertiary">
+    <div class="container-fluid">
+        
+      <span class="navbar-brand mb-0 h1" style="font-size: 30px;font-family: 'Times New Roman', Times, serif;"> <span routerLink="/products">←</span>  Orders</span>
+    </div>
+  </nav>
+
+<!-- <div class="card">
+  <div class="card-body">
+   
+    <div class="text-center">
+      <div class="row"  > -->
+        
+       <!-- <div class="col-md-2"><th>Items Images</th><tr><div> IMAGE URL</div> </div>  -->
+      <!--- <div class="col-md-2"><th>Product Name</th><tr><div>MOBILE</div> </div> 
+       <div class="col-md-2" style="width: 10px;"><th>Qty</th><tr><div  >1</div> </div> 
+       <div class="col-md-4" style="width:650px;"><th>Status</th><tr><div>  
+    
+
+        <div class="row d-flex justify-content-center">
+          <div class="col-12">
+          <ul id="progressbar" class="text-center">
+              <li class="active step0"></li>
+              <li class="active step0"></li>
+              <li class="active step0"></li>
+              <li class="step0"></li>
+          </ul>
+          </div>
+</div> 
+        <div class="col-md-2"><th>Product Price</th><tr><div>₹500</div> </div> 
+      </div>
+    
+  </div>
+</div>-->
+
+<div class="text-center">
+  <div class="row" *ngFor="let x of orders" >
+   <div class="col-md-2"><th>Items Images</th><tr><div> IMAGE URL</div> </div> 
+   <div class="col-md-2"><th>Product Name</th><tr><div>MOBILE</div> </div> 
+   <div class="col-md-2" style="width: 10px;"><th>Qty</th><tr><div>1</div> </div> 
+   <div class="col-md-4" style="width:fit-content;"><th>Status</th><tr><div>  
+
+
+       <div class="orderStatus">
+        <div class="orderStatus_progressbar">
+            <div class="progressbar_item">
+                <div class="progressbar_item_line">
+                    <div class="progressbar_item_line_bar">
+                        <div class="progressbar_item_line_bar_over"></div>
+                    </div>
+                </div>
+                <div class="progressbar_item_container">
+                    <div class="progressbar_item_container_circle">
+                        <i id="pendingIcon" class="fa" aria-hidden="true"></i>
+                    </div>
+                    <div class="progressbar_item_container_circle_item">Pending</div>
+                </div>
+            </div>
+            <div class="progressbar_item">
+                <div class="progressbar_item_line">
+                    <div class="progressbar_item_line_bar">
+                        <div class="progressbar_item_line_bar_over"></div>
+                    </div>
+                </div>
+                <div class="progressbar_item_container">
+                    <div class="progressbar_item_container_circle">
+                        <i class="fa fa-spinner fa-spin" aria-hidden="true"></i>
+                    </div>
+                    <div class="progressbar_item_container_circle_item">Processing</div>
+                </div>
+            </div>
+            <div class="progressbar_item">
+                <div class="progressbar_item_line">
+                    <div class="progressbar_item_line_bar">
+                        <div class="progressbar_item_line_bar_over"></div>
+                    </div>
+                </div>
+                <div class="progressbar_item_container">
+                    <div class="progressbar_item_container_circle">
+                        <i class="fa fa-truck fa-flip-horizontal" aria-hidden="true"></i>
+                    </div>
+                    <div class="progressbar_item_container_circle_item">Shipped</div>
+                </div>
+            </div>
+            <div class="progressbar_item">
+                <div class="progressbar_item_line progressbar_item_line_last">
+                    <div class="progressbar_item_line_bar">
+                        <div class="progressbar_item_line_bar_over"></div>
+                    </div>
+                </div>
+                <div class="progressbar_item_container">
+                    <div class="progressbar_item_container_circle">
+                        <i class="fa fa-gift" aria-hidden="true"></i>
+                    </div>
+                    <div class="progressbar_item_container_circle_item">Delivered</div>
+                </div>
+            </div>
+        </div>
+  
+        <div class="row">
+        <div class="orderStatus_msg">
+            <div class="orderStatus_msg_pointer"></div>
+            <div class="orderStatus_msg_show">
+                <ul>
+                    <li><span>13 Oct 2019 - 21:19 &nbsp;&nbsp; <span>Your order has been successfully verified.</span></span></li>
+                    <li><span>13 Oct 2019 - 21:19 &nbsp;&nbsp; <span>Thank you for shopping with us! Your order is being verified.</span></span></li>
+                </ul>
+            </div>
+        </div>
+    </div></div>
+
+   </div> </div> 
+    <div class="col-md-2"><th>Product Price</th><tr><div>₹500</div> </div> 
+  </div>
+
+
+
+
+
+
+
+

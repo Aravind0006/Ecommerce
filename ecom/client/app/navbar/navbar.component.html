@@ -1,0 +1,73 @@
+<!--------------------------------------------------NAVIGATION BAR--------------------------------------------------------------->
+
+<header style="background-color: white;">
+     <!-- / contact content -->
+     <div class="container">
+       <!-- logo -->
+       <strong class="logo" routerLink=""><img src="/assets/log1.png" style="object-fit: contain;height: 50px;width: 100px;"></strong>
+       <!-- open nav mobile -->
+   
+       <!--search -->
+   
+       <label class="open-search" for="open-search">
+         <i class="fa fa-search" aria-hidden="true" style="font-size: 35px;margin-bottom: 15px;"></i>
+         <input class="input-open-search" id="open-search" type="checkbox" name="menu" />
+         <div class="search">
+           <button class="button-search" style="font-size: 20px;"> <i class="fa fa-search" aria-hidden="true"></i></button>
+           <input type="text" placeholder="What are you looking for?" class="input-search" />
+         </div>
+       </label>
+   
+       <!-- // search -->
+   
+       <nav class="nav-content">
+
+         <!-- nav -->
+
+         <ul class="nav-content-list">
+           <li class="nav-content-item account-login">
+             <label class="open-menu-login-account" for="open-menu-login-account" >
+   
+               <input class="input-menu" id="open-menu-login-account" type="checkbox" name="menu" />
+   
+               <i class="fa fa-user" style="font-size: 40px;" aria-hidden="true"></i><span class="login-text" *ngIf="Username!=''">Hello {{Username}} <strong *ngIf="Username==''">Create
+                   Account</strong></span> <span class="item-arrow"></span>
+   
+               <!-- submenu -->
+               <ul class="login-list">
+                 <li class="login-list-item"routerLink="/login"> My account</li>
+                 <li class="login-list-item" routerLink="/demo" > Create account</li>
+                 <li class="login-list-item" (click)="LogOut()" *ngIf="Username!=''"> logout</li>
+   
+               </ul>
+               
+           <!-- <li class="nav-content-item" style="margin-left: 15px;"><i class="fa fa-truck" aria-hidden="true"
+               style="font-size: 35px;"></i></li> -->
+
+               <button routerLink="/orders" disabled class="btn btn-outline-success">
+                <i style="font-size: 30px;" class="fa fa-truck"></i>
+                <div style="font-size: 10px;" class="badge bg-danger"></div>
+            </button>
+
+
+
+<!--------------------------------------------cart symbol ------------------------------------------------------>
+           <!-- <li class="nav-content-item"> <i class="fa fa-shopping-cart" aria-hidden="true" routerLink="/cart"
+               style="font-size: 35px;"></i></li> -->
+
+               <button routerLink="/cart" class="btn btn-outline-primary" style="margin-left: 5px;">
+                <i style="font-size: 30px;" class="fa fa-shopping-cart"></i>
+                <div style="font-size: 10px;" class="badge bg-danger">{{totalItem}}</div>
+            </button>
+
+<!-- ---------------------------------------cart symbol -------------------------------------------------------------------- -->
+      
+
+
+<!-- call to action -->
+           </label>
+           </li>
+         </ul>
+       </nav>
+     </div>
+</header>   

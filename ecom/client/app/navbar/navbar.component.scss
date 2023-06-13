@@ -1,0 +1,290 @@
+* {
+     box-sizing: border-box;
+   }
+   
+   $blue: #545bc4;
+   $font: 'Rubik', sans-serif;
+   $color-text: #555;
+   $shadow: 2px 9px 49px -17px rgba(0, 0, 0, 0.3);
+   
+   body {
+     padding: 0;
+     margin: 0;
+     font-family: $font;
+   }
+   
+   strong {
+     padding: 0;
+     margin: 0;
+   }
+   
+   label,
+   a {
+     text-decoration: none;
+     color: $color-text;
+   }
+   
+   ul {
+     list-style: none;
+     padding: 0;
+   }
+   
+   // conatiner header
+   header {
+     box-shadow: $shadow;
+     position: sticky;
+     top: 0;
+     width: 100%;
+     z-index: 10;
+   }
+   
+   // content top
+   .header-content-top {
+     background: $blue;
+     height: 30px;
+     width: 100%;
+   
+     .content {
+       align-items: center;
+       display: flex;
+       height: 30px;
+       justify-content: flex-end;
+       margin: 0 auto;
+       max-width: 1300px;
+       width: 100%;
+   
+       span {
+         color: #fff;
+         font-size: 12px;
+         margin: 0 15px;
+   
+         .fas {
+           margin-right: 5px;
+         }
+       }
+     }
+   }
+   
+   // inner container 
+   .container {
+     align-items: center;
+     display: flex;
+     height: 70px;
+     justify-content: space-between;
+     margin: 0 auto;
+     max-width: 1300px;
+     padding: 0 15px;
+     position: relative;
+     width: 100%;
+   
+     // logo
+     .logo {
+       color: #545bc4;
+       font-size: 40px;
+       line-height: 20px;
+       padding-right: 15px;
+     }
+   
+     // search 
+     // open search
+     .open-search {
+       border-radius: 3px;
+       flex: auto;
+       margin: 0 15px;
+       overflow: hidden;
+       position: relative;
+   
+       @media(max-width: 991px) {
+         margin: 0;
+         position: static;
+         text-align: right;
+       }
+   
+       .fa-search {
+         display: none;
+   
+         @media(max-width: 991px) {
+           display: block;
+         }
+       }
+   
+       .input-open-search {
+         display: none;
+   
+         &:checked~.search {
+           display: block;
+         }
+       }
+     }
+   
+     // container search
+     .search {
+       @media(max-width: 991px) {
+         display: none;
+         position: absolute;
+         left: 0;
+         top: 70px;
+         width: 100%;
+         z-index: 999;
+       }
+   
+       // input search effects
+       .input-search {
+         border-radius: 3px;
+         border: 1px solid #e1e1e1;
+         height: 40px;
+         padding: 0 70px 0 15px;
+         width: 100%;
+         // style and effect focus inputs
+         background: white no-repeat;
+         transition: 100ms all linear 0s;
+         background-image: linear-gradient(to bottom, rgba(77, 97, 252, 0.63) 0%, rgba(77, 97, 252, 1) 90%), linear-gradient(to bottom, #e1e1e1, #e1e1e1);
+         background-size: 0 2px, 100% 1px;
+         background-position: 50% 100%, 50% 100%;
+         // effect transition
+         transition: background-size 0.3s cubic-bezier(0.64, 0.09, 0.08, 1);
+   
+         &:focus {
+           background-size: 100% 2px, 100% 1px;
+           outline: none;
+         }
+       }
+   
+       // open search menu mobile
+       .button-search {
+         background: $blue;
+         border: 0;
+         color: #fff;
+         cursor: pointer;
+         padding: 13px 20px;
+         position: absolute;
+         right: 0px;
+         top: 0px;
+   
+         .fa-search {
+           display: block;
+         }
+       }
+     }
+   
+     // nav mobile
+     .nav-content {
+   
+       // list nav
+       .nav-content-list {
+         align-items: center;
+         display: flex;
+         justify-content: space-between;
+         padding: 0 15px;
+   
+         .nav-content-item {
+           align-items: center;
+           display: flex;
+           height: 40px;
+           margin: 0 5px;
+           position: relative;
+           transition: 100ms all linear 0s;
+   
+           @media (max-width: 991px) {
+             padding: 0 5px;
+           }
+   
+           .item-arrow {
+             margin-left: 5px;
+             position: relative;
+             top: -3px;
+   
+             @media (max-width: 768px) {
+               display: none;
+             }
+           }
+   
+           // open menu mobile icone
+           .open-menu-login-account {
+             align-items: center;
+             cursor: pointer;
+             display: flex;
+             position: relative;
+           }
+   
+           .input-menu {
+             display: none;
+   
+             &:checked~.login-list {
+               display: block;
+             }
+           }
+   
+           .login-list {
+             background: #fff;
+             border-bottom: 3px solid $blue;
+             border-radius: 3px;
+             box-shadow: $shadow;
+             display: none;
+             overflow: hidden;
+             position: absolute;
+             right: 0;
+             top: 28px;
+             transition: 100ms all linear 0s;
+             width: 200px;
+             z-index: 10;
+   
+             .login-list-item {
+               padding: 15px 20px;
+   
+               &:hover {
+                 background: #545bc4;
+   
+                 a {
+                   color: #fff;
+                 }
+               }
+             }
+           }
+         }
+   
+         //nav items  
+         .nav-content-item {
+           &:nth-child(2):hover .fas {
+             color: #e74c3c;
+           }
+   
+           &:hover .fas {
+             color: #545bc4;
+           }
+         }
+   
+         // text create account login
+         .account-login {
+           .login-text {
+             align-items: end;
+             display: flex;
+             flex-direction: column;
+             font-size: 12px;
+             margin-left: 5px;
+   
+             @media (max-width: 991px) {
+               display: none;
+             }
+   
+             strong {
+               display: block;
+             }
+           }
+         }
+   
+         // nav links menu
+         .nav-content-link {
+           border-radius: 3px;
+           font-size: 19px;
+           padding: 10px 15px;
+           transition: 100ms all linear 0s;
+   
+           @media (max-width: 991px) {
+             padding: 0
+           }
+         }
+       }
+     }
+   
+   }   

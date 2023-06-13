@@ -1,0 +1,250 @@
+<app-navbar></app-navbar>
+
+<div class="card">
+  <div class="card-body">
+    <br>
+
+    <div class="header" style="text-align: center;">
+      <h2><strong>BRAND NEW MOBILE PHONES</strong></h2>
+    </div>
+    <br>
+    <div class="row " style="margin-left: 15px;" >
+      <div class="card col-md-3" style="width: 320px;" *ngFor="let x of mobilelist">
+        <img [src]="x.Imgurl" height="300px" width="100%" class="card-img-top" (click)="ShowId(x.productId)" alt="...">
+        <div class="card-body">
+          <h5>{{x.productName}}</h5>
+          <p class="card-text">{{x.productDesc}}</p>
+          <h3>{{x.price | currency:'INR':true}}</h3>
+          <button type="button" class="btn btn-outline-warning" (click)="addtocart(x)" style="margin: auto;">ADD TO
+            CART</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ====================================================secound row mobile cards ========================================================== -->
+<!-- <div class="card col-md-3" style="width: 320px; margin-top: 20px;" *ngFor="let x of prolist">
+  <img [src]="x.Imgurl" height="300px" width="100%" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5>{{x.productName}}</h5>
+    <p class="card-text">{{x.productDesc}}</p>
+    <h3>{{x.price | currency:'INR':true}}</h3>
+    <button type="button" class="btn btn-outline-warning">ADD TO CART</button>
+  </div>
+</div>
+<br> 
+</div> -->
+<!-- ---------------------------------------------------third row cards ------------------------------------------------------- -->
+
+<div class="card" style="margin-top: 50px;">
+  <div class="card-body">
+    <br>
+
+    <div class="header" style="text-align: center;">
+      <h2><strong>DAILY GROSERY PRODUCTS AT YOUR DOOR STEP</strong></h2>
+    </div>
+    <br>
+
+
+    <div class="row " style="margin-left: 15px;" >
+      <div class="card col-md-3" style="width: 320px;" (click)="ShowId(x.productId)" *ngFor="let x of groseryList">
+        <img [src]="x.Imgurl" height="300px" width="100%" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5>{{x.productName}}</h5>
+          <p class="card-text">{{x.productDesc}}</p>
+          <h3>{{x.price | currency:'INR':true}}</h3>
+          <button type="button" class="btn btn-outline-warning" style="margin: auto;"  (click)="addtocart(x)">ADD TO CART</button>
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+</div>
+<br>
+
+
+
+<!-- --------------------------------------------------------------fourth row ----------------------------------------------- -->
+
+<div class="card" style="margin-top: 50px;">
+  <div class="card-body">
+
+    <div class="header" style="text-align: center;">
+      <h2><strong>BRAND NEW LAPTOPS</strong></h2>
+    </div>
+
+    <br>
+
+
+    <div class="row " style="margin-left: 15px;" >
+      <div class="card col-md-3" style="width: 320px;"(click)="ShowId(x.productId)" *ngFor="let x of laptopList">
+        <img [src]="x.Imgurl" height="300px" width="100%" class="card-img-top" alt="..." >
+        <div class="card-body">
+          <h5>{{x.productName}}</h5>
+          <p class="card-text">{{x.productDesc}}</p>
+          <h3>{{x.price | currency:'INR':true}}</h3>
+          <button type="button" class="btn btn-outline-warning" style="margin: auto;"  (click)="addtocart(x)">ADD TO CART</button>
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+</div>
+<br>
+
+
+<!--===================================================fifth =======================================  -->
+<div class="card" style="margin-top: 50px;">
+  <div class="card-body">
+    <br>
+
+    <div class="header" style="text-align: center;">
+      <h2><strong>BRAND NEW LATEST PS5 GAMES AND MUCH MORE</strong></h2>
+    </div>
+    <br>
+
+    <div class="row " style="margin-left: 15px;" >
+      <div class="card col-md-3" style="width: 320px;"(click)="ShowId(x.productId)" *ngFor="let x of gamesList">
+        <img [src]="x.Imgurl" height="300px" width="100%" class="card-img-top" alt="..." >
+        <div class="card-body">
+          <h5>{{x.productName}}</h5>
+          <p class="card-text">{{x.productDesc}}</p>
+          <h3>{{x.price | currency:'INR':true}}</h3>
+          <button type="button" class="btn btn-outline-warning" style="margin: auto;"  (click)="addtocart(x)">ADD TO CART</button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<br>
+
+
+<!-- <div class="container">
+  <div class="row">
+    <ng-container *ngFor="let x of prolist">
+      <div class="card col-md-3">
+        <img [src]="x.Imgurl" alt="">
+        <h5 style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;max-width: 100ch;">{{x.title}}</h5>
+        <p style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;max-width: 100ch;">{{x.description}}
+        </p>
+        <p><strong>Price:</strong> ${{x.price}}</p>
+        <button class="btn btn-primary" (click)=addtocart(x)>Add to cart</button>
+      </div>
+    </ng-container>
+
+  </div>
+</div> -->
+
+<!-- --------------------------------------------------------------sixth row ----------------------------------------------- -->
+
+
+<!--  
+<div class="row "  style="margin-left: 30px;">
+  <div class="card col-md-3" style="width: 20rem;">
+    <img src="..." class="card-img-top" alt="...">
+    <div class="card-body">
+      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    </div>
+  </div>
+  <div class="card col-md-3" style="width: 20rem;">
+    <img src="..." class="card-img-top" alt="...">
+    <div class="card-body">
+      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    </div>
+  </div> 
+  <div class="card col-md-3" style="width: 20rem;">
+    <img src="..." class="card-img-top" alt="...">
+    <div class="card-body">
+      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    </div>
+  </div> 
+  <div class="card col-md-3" style="width: 20rem;">
+    <img src="..." class="card-img-top" alt="...">
+    <div class="card-body">
+      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    </div>
+  </div> 
+</div>
+<br>
+</div>
+</div> -->
+
+
+<!-- ========================================================seventh============================================== -->
+
+<!-- 
+<div class="card">
+  <div class="card-body">
+    <div class="container">
+    <div class="card-header" style="text-align: center;">
+      Featured
+    </div></div>
+    <br>
+    <div class="row " style="margin-left: 30px;">
+      <div class="card col-md-3" style="width: 20rem;">
+        <img src="..." class="card-img-top" alt="...">
+        <div class="card-body">
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        </div>
+      </div>
+      <div class="card col-md-3" style="width: 20rem;">
+        <img src="..." class="card-img-top" alt="...">
+        <div class="card-body">
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        </div>
+      </div> 
+      <div class="card col-md-3" style="width: 20rem;">
+        <img src="..." class="card-img-top" alt="...">
+        <div class="card-body">
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        </div>
+      </div> 
+      <div class="card col-md-3" style="width: 20rem;">
+        <img src="..." class="card-img-top" alt="...">
+        <div class="card-body">
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        </div>
+      </div> 
+    </div>
+    <br> -->
+
+
+
+<!-- --------------------------------------------------------------eigth row ----------------------------------------------- -->
+
+
+<!--  
+<div class="row "  style="margin-left: 30px;">
+  <div class="card col-md-3" style="width: 20rem;">
+    <img src="..." class="card-img-top" alt="...">
+    <div class="card-body">
+      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    </div>
+  </div>
+  <div class="card col-md-3" style="width: 20rem;">
+    <img src="..." class="card-img-top" alt="...">
+    <div class="card-body">
+      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    </div>
+  </div> 
+  <div class="card col-md-3" style="width: 20rem;">
+    <img src="..." class="card-img-top" alt="...">
+    <div class="card-body">
+      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    </div>
+  </div> 
+  <div class="card col-md-3" style="width: 20rem;">
+    <img src="..." class="card-img-top" alt="...">
+    <div class="card-body">
+      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    </div>
+  </div> 
+</div>
+<br>
+</div>
+</div> -->

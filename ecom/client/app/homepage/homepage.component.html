@@ -1,0 +1,329 @@
+<app-navbar></app-navbar>
+<!------------------------------------------------------NAVBAR ENDS--------------------------------------------------------------------------->
+
+<!------------------------------------------------SECOUND NAVBAR----------------------------------------------------------------------------->
+<!-- nav navigation commerce -->
+<div class="nav-container">
+  <nav class="all-category-nav">
+    <label class="open-menu-all" for="open-menu-all">
+      <input class="input-menu-all" id="open-menu-all" type="checkbox" name="menu-open" />
+      <span class="all-navigator"><i class="fa fa-bars" aria-hidden="true"></i> <span><strong> Category</strong>
+        </span>
+
+      </span>
+
+      <ul class="all-category-list" style="margin-top: 25px;">
+        <li class="all-category-list-item"><a class="all-category-list-link">Smartphones<i class="fa fa-mobile"
+              style="font-size: 40px;" aria-hidden="true"></i></a>
+          <!-- <div class="category-second-list">
+              <ul class="category-second-list-ul">
+                <li class="category-second-item"> Iphone 10</li>
+                <li class="category-second-item"> Galaxy Note 10</li>
+                <li class="category-second-item"> Motorola One </li>
+                <li class="category-second-item"> Galaxy A80 </li>
+                <li class="category-second-item"> Galaxy M </li>
+                <li class="category-second-item"> Huaway P30 </li>
+              </ul>
+
+              <div class="img-product-menu"><img src="https://i.ibb.co/Vvndkmy/banner.jpg"></div>
+            </div> -->
+        </li>
+        <li class="all-category-list-item"><a class="all-category-list-link">grosery
+            <i class="fa fa-shopping-bag" style="font-size: 30px;" aria-hidden="true"></i></a></li>
+
+        <li class="all-category-list-item"><a class="all-category-list-link">Laptops<i class="fa fa-laptop"
+              aria-hidden="true" style="font-size: 30px;"></i></a></li>
+
+        <li class="all-category-list-item"><a class="all-category-list-link">Games<i class="fa fa-gamepad"
+              aria-hidden="true" style="font-size: 30px;"></i></a></li>
+      </ul>
+    </label>
+  </nav>
+
+  <nav class="featured-category">
+
+    <ul class="nav-row">
+      <button class="nav-row-list nv2"><a class="nav-row-list-link" routerLink="/products">Smartphones</a></button>
+      <button class="nav-row-list nv2"><a class="nav-row-list-link" routerLink="/products">grosery</a></button>
+      <button class="nav-row-list nv2"><a class="nav-row-list-link" routerLink="/products">Laptops</a></button>
+      <button class="nav-row-list nv2"><a class="nav-row-list-link" routerLink="/products">Games</a></button>
+
+    </ul>
+  </nav>
+</div>
+
+
+<!------------------------------------------------SECOUND NAVBAR ENDS----------------------------------------------------------------------------->
+
+<!---------------------------------------------------CARASOUL STARTS ------------------------------------------------------------------------------>
+<div id="carouselExampleInterval" style="position: sticky;" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active " data-bs-interval="2000">
+
+      <img src="/assets/cs1.jpg" class="d-block w-100 c1  " alt="...">
+    </div>
+    <div class="carousel-item" data-bs-interval="2000">
+      <img src="/assets/cs2.jpg" class="d-block w-100 c1" alt="...">
+    </div>
+    <div class="carousel-item" data-bs-interval="2000">
+      <img src="/assets/cs3.jpg" class="d-block w-100 c1" alt="...">
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+
+  </button>
+
+</div>
+
+
+
+<br>
+
+
+<!------------------------------------------------------CARASOUL ENDS ---------------------------------------------------------------------------->
+
+
+<!------------------------------------------------------CARD ELEMENT WITH PRODCTS mobile----------------------------------------------------------------------->
+
+
+<div class="header" style="text-align: center;">
+  <h2><strong>BRAND NEW PRODUCTS AT YOUR VIEW</strong></h2>
+</div>
+<br>
+
+
+<div class="row row-cols-1 row-cols-md-4 g-4" style="margin-left: 20px;">
+  <div class="card col" style="width: 330px;" *ngFor="let x of mobilelist2">
+    <img [src]="x.Imgurl" height="300px" width="100%" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5>{{x.productName}}</h5>
+      <p class="card-text">{{x.productDesc}}</p>
+      <h3>{{x.price | currency:'INR':true}}</h3>
+      <button type="button" class="btn btn-outline-warning" style="margin: auto;" (click)="addtocart(x)">ADD TO CART</button>
+      <button type="button" class="btn btn-outline-primary" routerLink="/products">More products</button>
+    </div>
+  </div>
+
+  <div class="card col" style="width: 330px;" *ngFor="let x of mobilelist">
+    <img [src]="x.Imgurl" height="300px" width="100%" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5>{{x.productName}}</h5>
+      <p class="card-text">{{x.productDesc}}</p>
+      <h3>{{x.price | currency:'INR':true}}</h3>
+      <button type="button" class="btn btn-outline-warning" style="margin: auto;" (click)="addtocart(x)">ADD TO CART</button>
+      <button type="button" class="btn btn-outline-primary" routerLink="/products">More products</button>
+    </div>
+
+
+  </div>
+  <div class="card col" style="width: 330px;" *ngFor="let x of mobilelist1">
+    <img [src]="x.Imgurl" height="300px" width="100%" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5>{{x.productName}}</h5>
+      <p class="card-text">{{x.productDesc}}</p>
+      <h3>{{x.price | currency:'INR':true}}</h3>
+      <button type="button" class="btn btn-outline-warning" style="margin: auto;" (click)="addtocart(x)">ADD TO CART</button>
+      <button type="button" class="btn btn-outline-primary" routerLink="/products">More products</button>
+    </div>
+  </div>
+  <div class="card col-md-3" style="width: 330px;">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRwQd2XVkq-ZFrfykNyBivdchKNNx8miwKehg&usqp=CAU"
+      height="300px" width="100%" class="card-img-top" alt="...">
+    <div class="card-body" style="text-align: left;">
+      <h5>Exclusive Sale is Live - Get upto 38% off on Mobiles</h5>
+      <p>
+        <li>Enjoy the internet with the latest phone.
+        <li>Worlds largest store for cell phones.</li>
+        <li>We give you the best phones with quality</li>
+      </p>
+      <div style="text-align: center;"> <button type="button" class="btn btn-outline-primary"
+          routerLink="/products">Shop Now</button></div>
+
+    </div>
+  </div>
+</div>
+
+<br>
+<!-- ================================================== groser list ========================================================== -->
+
+<div class="row row-cols-1 row-cols-md-4 g-4" style="margin-left: 20px;">
+  <div class="card col" style="width: 330px;" *ngFor="let x of groseryList">
+    <img [src]="x.Imgurl" height="300px" width="100%" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5>{{x.productName}}</h5>
+      <p class="card-text">{{x.productDesc}}</p>
+      <h3>{{x.price | currency:'INR':true}}</h3>
+      <button type="button" class="btn btn-outline-warning" style="margin: auto;" (click)="addtocart(x)">ADD TO CART</button>
+      <button type="button" class="btn btn-outline-primary" routerLink="/products">More products</button>
+    </div>
+  </div>
+
+  <div class="card col" style="width: 330px;" *ngFor="let x of groseryList1">
+    <img [src]="x.Imgurl" height="300px" width="100%" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5>{{x.productName}}</h5>
+      <p class="card-text">{{x.productDesc}}</p>
+      <h3>{{x.price | currency:'INR':true}}</h3>
+      <button type="button" class="btn btn-outline-warning" style="margin: auto;" (click)="addtocart(x)">ADD TO CART</button>
+      <button type="button" class="btn btn-outline-primary" routerLink="/products">More products</button>
+    </div>
+
+
+  </div>
+  <div class="card col" style="width: 330px;" *ngFor="let x of groseryList2">
+    <img [src]="x.Imgurl" height="300px" width="100%" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5>{{x.productName}}</h5>
+      <p class="card-text">{{x.productDesc}}</p>
+      <h3>{{x.price | currency:'INR':true}}</h3>
+      <button type="button" class="btn btn-outline-warning" style="margin: auto;" (click)="addtocart(x)">ADD TO CART</button>
+      <button type="button" class="btn btn-outline-primary" routerLink="/products">More products</button>
+    </div>
+  </div>
+  <div class="card col-md-3" style="width: 330px;">
+    <img
+      src="data:image/jpeg;base64,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"
+      height="300px" width="100%" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h4>Checkout Grocery Deals & Discounts Online at Best Prices</h4>
+      <p>
+        <li>Only fresh produce here.
+        <li>A place for your grocery.
+        <li>Get the best pound for your buck.
+        <li>Find home essentials here.
+        <li>Stock up your pantry with us.
+        <li> We have quality products here.
+      </p>
+      <h3></h3>
+
+      <div style="text-align: center;"> <button type="button" class="btn btn-outline-primary"
+          routerLink="/products">Shop Now</button></div>
+    </div>
+  </div>
+</div>
+
+<br>
+
+<!-- =======================================Laptoplist =========================================================================== -->
+<div class="row row-cols-1 row-cols-md-4 g-4" style="margin-left: 20px;">
+  <div class="card col" style="width: 330px;" *ngFor="let x of laptopList">
+    <img [src]="x.Imgurl" height="300px" width="100%" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5>{{x.productName}}</h5>
+      <p class="card-text">{{x.productDesc}}</p>
+      <h3>{{x.price | currency:'INR':true}}</h3>
+      <button type="button" class="btn btn-outline-warning" style="margin: auto;" (click)="addtocart(x)">ADD TO CART</button>
+      <button type="button" class="btn btn-outline-primary" routerLink="/products">More products</button>
+    </div>
+  </div>
+
+  <div class="card col" style="width: 330px;" *ngFor="let x of laptopList1">
+    <img [src]="x.Imgurl" height="300px" width="100%" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5>{{x.productName}}</h5>
+      <p class="card-text">{{x.productDesc}}</p>
+      <h3>{{x.price | currency:'INR':true}}</h3>
+      <button type="button" class="btn btn-outline-warning" style="margin: auto;" (click)="addtocart(x)">ADD TO CART</button>
+      <button type="button" class="btn btn-outline-primary" routerLink="/products">More products</button>
+    </div>
+
+
+  </div>
+  <div class="card col" style="width: 330px;" *ngFor="let x of laptopList2">
+    <img [src]="x.Imgurl" height="300px" width="100%" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5>{{x.productName}}</h5>
+      <p class="card-text">{{x.productDesc}}</p>
+      <h3>{{x.price | currency:'INR':true}}</h3>
+      <button type="button" class="btn btn-outline-warning" style="margin: auto;" (click)="addtocart(x)">ADD TO CART</button>
+      <button type="button" class="btn btn-outline-primary" routerLink="/products">More products</button>
+    </div>
+  </div>
+  <div class="card col-md-3" style="width: 330px;">
+    <img src="https://m.media-amazon.com/images/G/31/img19/AMS/Houseads/Laptops-Sept2019._CB436595915_.jpg"
+      height="300px" width="100%" class="card-img-top" alt="...">
+    <div class="card-body" style="text-align: left;">
+      <h4>Upto 40% Off Laptops Sale - Laptops Mega Sale Live Today</h4>
+      <p class="card-text">
+        <li>Affordable and quality accessories for your PC.
+        <li>The ultimate gaming accessories.</li>
+        <li>Loaded with amazing features.</li>
+        <li>User-friendly computer accessories for you</li>
+      </p>
+      <div style="text-align: center;"> <button type="button" class="btn btn-outline-primary"
+          routerLink="/products">Shop Now</button></div>
+
+    </div>
+  </div>
+</div>
+
+<br>
+
+<!-- ==============================================GamesLIst =========================================================================== -->
+<div class="row row-cols-1 row-cols-md-4 g-4" style="margin-left: 20px;">
+
+  <div class="card col" style="width: 330px;" *ngFor="let x of gamesList">
+    <img [src]="x.Imgurl" height="300px" width="100%" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5>{{x.productName}}</h5>
+      <p class="card-text">{{x.productDesc}}</p>
+      <h3>{{x.price | currency:'INR':true}}</h3>
+      <button type="button" class="btn btn-outline-warning" style="margin: auto;"  (click)="addtocart(x)">ADD TO CART</button>
+      <button type="button" class="btn btn-outline-primary" routerLink="/products">More products</button>
+    </div>
+  </div>
+
+  <div class="card col" style="width: 330px;" *ngFor="let x of gamesList1">
+    <img [src]="x.Imgurl" height="300px" width="100%" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5>{{x.productName}}</h5>
+      <p class="card-text">{{x.productDesc}}</p>
+      <h3>{{x.price | currency:'INR':true}}</h3>
+      <button type="button" class="btn btn-outline-warning" style="margin: auto;"  (click)="addtocart(x)">ADD TO CART</button>
+      <button type="button" class="btn btn-outline-primary" routerLink="/products">More products</button>
+    </div>
+
+
+  </div>
+  <div class="card col" style="width: 330px;" *ngFor="let x of gamesList2">
+    <img [src]="x.Imgurl" height="300px" width="100%" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5>{{x.productName}}</h5>
+      <p class="card-text">{{x.productDesc}}</p>
+      <h3>{{x.price | currency:'INR':true}}</h3>
+      <button type="button" class="btn btn-outline-warning" style="margin: auto;"  (click)="addtocart(x)">ADD TO CART</button>
+      <button type="button" class="btn btn-outline-primary" routerLink="/products">More products</button>
+    </div>
+  </div>
+  <div class="card col-md-3" style="width: 330px;">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQrtje04rjWexFXmtA1vc3qfpLPsmPNa-wkQw&usqp=CAU"
+      height="300px" width="100%" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5></h5>
+
+      <p>
+        <li>Live In Your World, Play in Ours</li>
+        <li>Greatness Awaits! Long Live Play!</li>
+        <li>if you're looking to purchase a PS5 console </li>
+        <li>Play Has No Limits</li>
+        <li>we introduced our first global tagline for the PlayStation</li>
+        <li>Play Has No Limits</li>
+      </p>
+      <h3></h3>
+
+      <div style="text-align: center;"> <button type="button" class="btn btn-outline-primary"
+          routerLink="/products">Shop Now</button></div>
+    </div>
+  </div>
+</div>
+
+<br>
+
+
+<app-footer></app-footer>
